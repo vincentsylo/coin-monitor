@@ -1,4 +1,12 @@
-language: generic
+language: node_js
+
+node_js:
+  - "7.9.0"
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
 
 after_success:
   - chmod a+x deploy.sh compile.sh

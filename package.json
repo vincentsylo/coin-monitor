@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run lint && webpack --env=prod -p",
     "lint": "eslint src && stylelint src/**/*.css",
-    "start": "webpack-dev-server --env=dev"
+    "start": "webpack-dev-server --env=dev",
+    "test": "echo \"Error: no test specified.\""
   },
   "author": "Vincent Lo",
   "license": "ISC",

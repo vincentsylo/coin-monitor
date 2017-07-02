@@ -1,2 +1,1 @@
-yarn
 npm run build
