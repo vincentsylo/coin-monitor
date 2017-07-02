@@ -18,8 +18,3 @@ deploy:
   local_dir: dist
   on:
     branch: master
-
-env:
-  global:
-  - ENCRYPTION_LABEL: "ec0fc977c305"
-  - COMMIT_AUTHOR_EMAIL: "vincentsylo@gmail.com"
