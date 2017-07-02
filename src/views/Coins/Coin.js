@@ -102,6 +102,7 @@ export default class Coin extends Component {
     const { isNew, data, coins } = this.props;
     const { editing, coin, value, amount, name, showAutoComplete } = this.state;
 
+    const currency = _.toUpper(data.currency);
     const filteredSuggestions = _.filter(data.coins, c => !coins[c.symbol] && _.includes(c.symbol, _.toUpper(coin)));
     const suggestions = filteredSuggestions.length > 0 ? (
       _.map(filteredSuggestions, suggestion => <div key={suggestion.id} className={styles.suggestion} onClick={() => this.selectSuggestion(suggestion)}>{suggestion.symbol}</div>)
@@ -125,7 +126,7 @@ export default class Coin extends Component {
         className={styles.submit}
         onClick={this.remove}
       >
-        Remove {coin} <i className="fa fa-minus" />
+        Remove <i className="fa fa-minus" />
       </button>,
       <button
         type="submit"
@@ -133,7 +134,7 @@ export default class Coin extends Component {
         className={styles.submit}
         onClick={() => this.setState({ editing: false }, () => this.submit(true))}
       >
-        Save {coin} <i className="fa fa-check" />
+        Save <i className="fa fa-check" />
       </button>,
     ];
 
@@ -170,7 +171,7 @@ export default class Coin extends Component {
             </div>
 
             <div className={styles.inputContainer}>
-              <label htmlFor="value" className={styles.label}>Value</label>
+              <label htmlFor="value" className={styles.label}>Value ({currency})</label>
               <input type={activeInput ? 'number' : 'text'} id="value" disabled={!activeInput} className={styles.input} value={value} onChange={this.updateValue} autoComplete="off" />
             </div>
           </div>
