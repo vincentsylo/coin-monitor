@@ -1,0 +1,56 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loader {
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid var(--lightGrey);
+  flex: 1;
+  margin: 8px;
+
+  & .header {
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    padding: 8px;
+    text-align: center;
+  }
+
+  & .content {
+    padding: 8px;
+    text-align: center;
+  }
+
+  & .success {
+    color: var(--success);
+  }
+
+  & .error {
+    color: var(--error);
+  }
+}
+
+.charts {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.chart {
+  flex-basis: 400px;
+}

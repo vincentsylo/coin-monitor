@@ -1,0 +1,113 @@
+.coin {
+  background-color: #fff;
+  border: 1px solid var(--lightGrey);
+  flex: 1;
+  flex-basis: 200px;
+  margin: 8px;
+  text-align: center;
+
+  & .title {
+    border-bottom: 1px solid var(--lightGrey);
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 8px;
+    padding: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.container {
+  padding: 8px;
+}
+
+.inputContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  position: relative;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.input {
+  border: 1px solid var(--lightGrey);
+  height: 30px;
+  text-align: center;
+  width: 50%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    border: 1px solid transparent;
+  }
+}
+
+.autoComplete {
+  background-color: #fff;
+  border: 1px solid var(--lightGrey);
+  border-top: none;
+  left: 50%;
+  min-height: 0;
+  max-height: 200px;
+  overflow: scroll;
+  padding: 1px;
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 50%;
+  z-index: 10;
+}
+
+.suggestion {
+  cursor: pointer;
+  padding: 8px 0;
+
+  &:hover {
+    background-color: var(--lightGrey);
+  }
+}
+
+.noSuggestion {
+  color: var(--grey);
+  font-size: 14px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit {
+  background-color: var(--primary);
+  border: none;
+  color: #fff;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 16px;
+  padding: 16px;
+  text-transform: uppercase;
+
+  &:hover:not(:disabled) {
+    background: color(var(--primary) tint(10%));
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: var(--grey);
+  }
+}

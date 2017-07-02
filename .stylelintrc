@@ -1,0 +1,31 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order",
+    "stylelint-no-browser-hacks/lib"
+  ],
+  "rules": {
+    "at-rule-no-vendor-prefix": true,
+    "font-weight-notation": "numeric",
+    "function-url-quotes": "always",
+    "max-nesting-depth": 1,
+    "media-feature-name-no-vendor-prefix": true,
+    "order/properties-order": [["composes"], { "unspecified": "bottomAlphabetical" }],
+    "plugin/no-browser-hacks": true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global"]
+    }],
+    "string-quotes": "single",
+    "value-no-vendor-prefix": true,
+    "property-no-unknown": [true, {
+      "ignoreProperties": [
+        "composes"
+      ]
+    }],
+    "declaration-block-no-duplicate-properties": [true, {
+      "ignore": ["consecutive-duplicates"]
+    }]
+  }
+}

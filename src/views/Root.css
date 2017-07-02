@@ -1,0 +1,74 @@
+@import 'normalize.css';
+
+html,
+body,
+:global(#app) {
+  background-color: color(var(--primary) tint(90%));
+  font-family: 'Nunito', sans-serif;
+  height: 100%;
+}
+
+.main {
+  margin-left: 240px;
+}
+
+.header {
+  background-color: color(var(--primary) tint(10%));
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.currency {
+  border: 1px solid var(--lightGrey);
+  border-radius: 0;
+  height: 30px;
+  margin: 8px;
+  width: 80px;
+}
+
+.content {
+  padding: 8px;
+}
+
+.navigation {
+  background-color: var(--primary);
+  height: 100%;
+  position: fixed;
+  width: 240px;
+
+  & .title {
+    align-items: center;
+    background-color: var(--primary);
+    color: #fff;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    height: 50px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.link {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 8px 0;
+  padding: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  & .linkIcon {
+    width: 30px;
+  }
+
+  &:hover {
+    background-color: color(var(--primary) tint(10%));
+  }
+}

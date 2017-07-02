@@ -1,0 +1,7 @@
+language: generic
+
+script: bash ./deploy.sh
+env:
+  global:
+  - ENCRYPTION_LABEL: "ec0fc977c305"
+  - COMMIT_AUTHOR_EMAIL: "vincentsylo@gmail.com"
