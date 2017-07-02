@@ -8,9 +8,16 @@ cache:
   directories:
     - node_modules
 
-after_success:
-  - chmod a+x deploy.sh compile.sh
-  - bash ./deploy.sh
+install:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  on:
+    branch: master
 
 env:
   global:
