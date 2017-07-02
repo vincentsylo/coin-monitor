@@ -1,6 +1,9 @@
 language: generic
 
-script: bash ./deploy.sh
+after_success:
+  - chmod a+x deploy.sh compile.sh
+  - bash ./deploy.sh
+
 env:
   global:
   - ENCRYPTION_LABEL: "ec0fc977c305"
